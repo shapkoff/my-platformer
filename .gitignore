@@ -107,3 +107,9 @@ InitTestScene*.unity*
 
 # Auto-generated cache in Assets folder
 /[Aa]ssets/[Ss]ceneDependencyCache*
+
+# Asset Store Terms of Service and EULA
+/Assets/Brackeys
+/Assets/Brackeys.meta
+/Assets/Simple 2D Platformer BE2
+/Assets/Simple 2D Platformer BE2.meta

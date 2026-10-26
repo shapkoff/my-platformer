@@ -113,3 +113,8 @@ InitTestScene*.unity*
 /Assets/Brackeys.meta
 /Assets/Simple 2D Platformer BE2
 /Assets/Simple 2D Platformer BE2.meta
+
+Assets/Art/Tilesets/PlatformerTiles.png
+Assets/Art/Tilesets/PlatformerTiles.png.meta
+Assets/Art/Characters/BlobPlayer_Blue.png
+Assets/Art/Characters/BlobPlayer_Blue.png.meta

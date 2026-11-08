@@ -103,6 +103,15 @@
       "source": "builtin",
       "dependencies": {}
     },
+    "com.unity.cinemachine": {
+      "version": "6.6.0",
+      "depth": 1,
+      "source": "builtin",
+      "dependencies": {
+        "com.unity.splines": "2.8.4",
+        "com.unity.modules.imgui": "1.0.0"
+      }
+    },
     "com.unity.collab-proxy": {
       "version": "2.13.6",
       "depth": 0,
@@ -132,6 +141,16 @@
       "depth": 1,
       "source": "builtin",
       "dependencies": {}
+    },
+    "com.unity.feature.gameplay-storytelling": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {
+        "com.unity.cinemachine": "6.6.0",
+        "com.unity.timeline": "6.6.0",
+        "com.unity.visualscripting": "1.9.13"
+      }
     },
     "com.unity.graph-authoring": {
       "version": "1.0.0",
@@ -256,6 +275,17 @@
         "com.unity.graph-authoring": "1.0.0"
       }
     },
+    "com.unity.splines": {
+      "version": "2.9.1",
+      "depth": 2,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.mathematics": "1.2.1",
+        "com.unity.modules.imgui": "1.0.0",
+        "com.unity.settings-manager": "1.0.3"
+      },
+      "url": "https://packages.unity.com"
+    },
     "com.unity.test-framework": {
       "version": "1.8.0",
       "depth": 0,
@@ -299,8 +329,8 @@
       }
     },
     "com.unity.visualscripting": {
-      "version": "1.9.12",
-      "depth": 0,
+      "version": "1.9.13",
+      "depth": 1,
       "source": "registry",
       "dependencies": {
         "com.unity.ugui": "2.0.0",

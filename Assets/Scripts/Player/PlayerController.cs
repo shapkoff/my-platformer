@@ -59,6 +59,11 @@ public class PlayerController : MonoBehaviour
     
     [SerializeField, Range(0.1f, 0.8f)] private float stepInterval = 0.32f;
     private float stepTimer;
+    
+    [Header("Взаємодія")]
+    [SerializeField] private Transform interactPoint;
+    [SerializeField, Range(0.2f, 1.5f)] private float interactRadius = 0.6f;
+    [SerializeField] private LayerMask interactableLayer;
 
 
 
@@ -100,6 +105,11 @@ public class PlayerController : MonoBehaviour
             Jump();
             jumpBufferCounter = 0f;
             coyoteCounter = 0f;
+        }
+
+        if (controls.Player.Interact.WasPressedThisFrame())
+        {
+            TryInteract();
         }
  
         moveInput = controls.Player.Move.ReadValue<Vector2>().x;
@@ -214,6 +224,15 @@ public class PlayerController : MonoBehaviour
             PlayFootstep();
             stepTimer = stepInterval;
         }
+    }
+
+    private void TryInteract()
+    {
+        Collider2D hit = Physics2D.OverlapCircle(
+            interactPoint.position, interactRadius, interactableLayer);
+ 
+        if (hit != null && hit.TryGetComponent(out IInteractable target))
+            target.Interact();
     }
 
     
